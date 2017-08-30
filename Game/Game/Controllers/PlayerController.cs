@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Game.Data;
@@ -16,14 +15,14 @@ namespace Game.Controllers
             _gameContext = gameContext;
         }
 
-        // GET api/values
+        // GET api/player
         [HttpGet]
         public JsonResult Get()
         {
             return Json(_gameContext.Player.ToList());
         }
 
-        // GET api/values/5
+        // GET api/player/{id}
         [HttpGet("{id}")]
         public JsonResult Get(Guid id)
         {
