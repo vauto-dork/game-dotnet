@@ -5,6 +5,7 @@ namespace Game.Data
     public class GameContext : DbContext
     {
         public DbSet<Player> Player { get; set; }
+        public DbSet<Game> Game { get; set; }
 
         public GameContext(DbContextOptions options) : base(options) { }
 
