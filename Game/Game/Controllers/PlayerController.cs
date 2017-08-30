@@ -29,7 +29,7 @@ namespace Game.Controllers
             return Json(_gameContext.Player.SingleOrDefault(player => player.Id == id));
         }
 
-        // POST api/values
+        // POST api/player
         [HttpPost]
         public void Post([FromBody]PlayerDto playerDto)
         {
