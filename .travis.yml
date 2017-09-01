@@ -3,6 +3,15 @@ mono: none
 dotnet: 1.0.4
 dist: trusty
 script:
+ # dotnet
  - cd Game
  - dotnet restore
  - dotnet publish -c release
+ # angular
+ - npm install @angular/cli --global
+ - cd Game
+ - npm install
+ - ng build -prod
+notifications:
+  email:
+    - notSteven@fakeEmail.com
