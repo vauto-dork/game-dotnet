@@ -45,5 +45,15 @@ namespace Game.Controllers
             _gameContext.Add(newPlayer);
             _gameContext.SaveChanges();
         }
+
+		// PATCH api/player/{id}/active
+		[HttpPatch("{id}/active")]
+		public void ToggleActive(Guid id)
+		{
+            var playerToToggle = _gameContext.Player.SingleOrDefault(player => player.Id == id);
+            playerToToggle.Active = !playerToToggle.Active;
+
+            _gameContext.SaveChanges();
+		}
     }
 }
