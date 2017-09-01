@@ -20,4 +20,5 @@ bld/
 [Bb]in/
 [Oo]bj/
 
-.vs/ 
+.vs/
+.vscode/
