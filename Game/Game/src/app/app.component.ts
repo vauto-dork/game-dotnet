@@ -8,13 +8,12 @@ import { Http } from '@angular/http'
 })
 
 export class AppComponent implements OnInit {
-  constructor() { }
-  // constructor(private _httpService: Http) { }
+   constructor(private _httpService: Http) { }
    apiValues: string[] = [];
    title: string = 'DorkGame'
     ngOnInit() {
-  //     this._httpService.get('/api/player').subscribe(values => {
-  //       this.apiValues = values.json() as string[];
-  //     });
+       this._httpService.get('/api/player').subscribe(values => {
+        this.apiValues = values.json() as string[];
+       });
     }
 }
