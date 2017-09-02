@@ -11,6 +11,7 @@ script:
  - npm install @angular/cli --global
  - cd Game
  - npm install
+ - npm run lint
  - ng build -prod
 notifications:
   email:
