@@ -1,5 +1,5 @@
-<div class="navbar navbar-fixed-top navbar-expand-lg" [ngClass]="navbarStyling">
-    <a class="navbar-brand" (click)="navbarCollapsed = true">ng-bootstrap</a>
+<div class="navbar navbar-fixed-top navbar-expand-lg" [ngClass]="'navbar-'+theme + ' bg-'+theme">
+    <a class="navbar-brand" (click)="navbarCollapsed = true">Theme: {{theme}}</a>
 
     <button class="navbar-toggler navbar-toggler-right" type="button" (click)="navbarCollapsed = !navbarCollapsed"
             [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">

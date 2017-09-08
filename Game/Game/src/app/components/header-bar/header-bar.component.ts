@@ -8,9 +8,8 @@ import { Http } from '@angular/http';
 })
 
 export class HeaderBarComponent {
-  navbarCollapsed = true;
-  theme = 'dark';
-  navbarStyling = `navbar-${this.theme} bg-${this.theme}`;
+  @Input() theme: string;
+  navbarCollapsed: Boolean = true;
 
   constructor() {
   }

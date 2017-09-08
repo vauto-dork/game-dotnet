@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { HeaderBarComponent } from './header-bar/header-bar.component';
+import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
    declarations: [
-        HeaderBarComponent,
-        AppComponent
+        AppComponent,
+        HeaderBarComponent
    ],
    imports: [
       NgbModule.forRoot(),
@@ -18,7 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       HttpModule
    ],
    providers: [],
-   bootstrap: [HeaderBarComponent, AppComponent]
+   bootstrap: [AppComponent]
 })
 
 export class AppModule { }
