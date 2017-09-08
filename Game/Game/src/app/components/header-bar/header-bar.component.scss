@@ -1,0 +1,9 @@
+.navbar-dark {
+    a.navbar-brand {
+        &:hover {
+            color: #e0e0e0;
+        }
+
+        color: #ffffff;
+    }
+}
